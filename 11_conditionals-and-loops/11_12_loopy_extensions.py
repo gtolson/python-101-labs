@@ -8,3 +8,19 @@
 # for example flags and conditional statements.
 
 filename = "operators.pdf"
+file_ext = ""
+
+for char in filename: 
+    if char == ".":
+        file_ext += char
+    elif file_ext == ".":
+        file_ext += char
+    elif file_ext == ".p":
+        file_ext += char
+    elif file_ext == ".pd":
+        file_ext += char
+
+print(file_ext)
+
+if  file_ext == ".pdf":
+    print(f"{filename} is a pdf file")

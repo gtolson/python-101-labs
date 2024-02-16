@@ -10,3 +10,6 @@
 
 wrong = False
 right = True
+
+answer = not wrong and wrong or wrong 
+print(answer)

@@ -6,3 +6,9 @@
 # What dish can you make from these ingredients? :)
 
 s = "They grappled with their leggins before going to see the buttercups flourish."
+
+print(s[57:63])
+print(s[68:73])
+print(s[5:9] + s[11])
+print(s[68:73])
+

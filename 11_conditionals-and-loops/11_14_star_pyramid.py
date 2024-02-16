@@ -22,3 +22,11 @@
 # * * *
 #
 # HINT: Think of nested for loops!
+stars = 8
+star = 0
+
+while star < stars:
+    star += 1
+    for x in range(star):
+        print("*", end=" ")
+    print()
