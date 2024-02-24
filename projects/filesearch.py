@@ -14,3 +14,35 @@
 # Start with a small folder to make it easy to check whether your program is
 # working correctly. Then search a bigger folder.
 # This program should work for any specified folder on your computer.
+
+
+#!/usr/bin/python
+
+import pathlib
+
+file_extensions = [".jpg", ".mov"]
+
+search_folder = input("Please enter the full path of the folder you want to search: ")
+search_folder = pathlib.Path(search_folder)
+
+for item in search_folder.iterdir():
+    if item.is_file():
+        for fex in file_extensions:
+            if item.suffix == fex:
+                print(item)
+    elif item.is_dir():
+        for item_l1 in item.iterdir():
+            if item_l1.is_file():
+                for fex in file_extensions:
+                    if item_l1.suffix == fex: 
+                        print(item_l1)
+            elif item_l1.is_dir():
+                for item_l2 in item_l1.iterdir():
+                    if item_l2.is_file():
+                        for fex in file_extensions:
+                            if item_l2.suffix == fex: 
+                                print(item_l2)
+                            
+
+                        
+            
